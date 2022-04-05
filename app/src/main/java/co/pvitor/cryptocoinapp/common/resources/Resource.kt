@@ -1,8 +1,9 @@
-package co.pvitor.cryptocoinapp.feature_market.data.common
+package co.pvitor.cryptocoinapp.common.resources
 
 sealed class Resource<out D>(
     val data: D? = null,
     val status: ApiStatus? = null,
+    val isLoading: Boolean = false,
     val message: String? = null
 ) {
 
@@ -17,9 +18,10 @@ sealed class Resource<out D>(
         message = exception
     )
 
-    data class Loading(val isLoading: Boolean) : Resource<Nothing>(
+    data class Loading(val _isLoading: Boolean) : Resource<Nothing>(
         null,
         status = ApiStatus.LOADING,
+        isLoading = _isLoading
     )
 
 }

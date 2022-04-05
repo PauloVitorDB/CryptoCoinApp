@@ -1,4 +1,4 @@
-package co.pvitor.cryptocoinapp.feature_market.data.common
+package co.pvitor.cryptocoinapp.common.resources
 
 sealed class ApiStatus {
 
