@@ -5,6 +5,7 @@ import co.pvitor.cryptocoinapp.feature_market.data.data_source.remote.CoinGeckoA
 import co.pvitor.cryptocoinapp.feature_market.data.repository.CoinRepositoryImpl
 import co.pvitor.cryptocoinapp.feature_market.domain.repository.CoinRepository
 import co.pvitor.cryptocoinapp.feature_market.domain.use_case.MarketUseCases
+import co.pvitor.cryptocoinapp.feature_market.domain.use_case.detailed_coin.DetailedCoinPrice
 import co.pvitor.cryptocoinapp.feature_market.domain.use_case.list_coins.ListCoins
 import dagger.Module
 import dagger.Provides
@@ -37,7 +38,8 @@ object AppModule {
     @Singleton
     fun provideMarketUseCases(repository: CoinRepository) : MarketUseCases {
         return MarketUseCases(
-            listCoins = ListCoins(repository)
+            listCoins = ListCoins(repository),
+            detailedCoinPrice = DetailedCoinPrice(repository)
         )
     }
 

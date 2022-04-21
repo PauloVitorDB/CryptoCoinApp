@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/text_view_coin_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="$ 49,333.03" />
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_rank"
+        android:text="@string/text_market_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_coin_price"
+        app:layout_constraintEnd_toStartOf="@id/text_view_label_coin_market_cap"/>
+
+    <TextView
+        android:id="@+id/text_view_coin_market_rank"
+        android:text="@string/text_market_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/text_view_label_coin_market_volume"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_label_coin_market_rank"
+        app:layout_constraintEnd_toStartOf="@id/text_view_coin_market_cap"/>
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_cap"
+        android:text="@string/text_market_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/text_view_label_coin_market_rank"
+        app:layout_constraintTop_toTopOf="@id/text_view_label_coin_market_rank"
+        app:layout_constraintEnd_toStartOf="@id/text_view_label_coin_market_valuation"/>
+
+    <TextView
+        android:id="@+id/text_view_coin_market_cap"
+        android:text="@string/text_market_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/text_view_coin_market_rank"
+        app:layout_constraintTop_toBottomOf="@id/text_view_label_coin_market_cap"
+        app:layout_constraintEnd_toStartOf="@id/text_view_coin_market_valuation"/>
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_valuation"
+        android:text="@string/text_market_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="@id/text_view_label_coin_market_rank"
+        app:layout_constraintStart_toEndOf="@id/text_view_label_coin_market_cap"
+        app:layout_constraintTop_toBottomOf="@id/text_view_coin_price"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_view_coin_market_valuation"
+        android:text="@string/text_market_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@id/text_view_coin_market_cap"
+        app:layout_constraintTop_toBottomOf="@id/text_view_label_coin_market_valuation"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_volume"
+        android:text="@string/text_market_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_coin_market_rank"
+        app:layout_constraintEnd_toStartOf="@id/text_view_label_coin_market_24_high"/>
+
+
+    <TextView
+        android:id="@+id/text_view_coin_market_volume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintEnd_toStartOf="@id/text_view_coin_market_24_high"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_label_coin_market_volume" />
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_24_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/text_view_label_coin_market_volume"
+        app:layout_constraintTop_toTopOf="@+id/text_view_label_coin_market_volume"
+        app:layout_constraintEnd_toStartOf="@id/text_view_label_coin_market_24_low"/>
+
+    <TextView
+        android:id="@+id/text_view_coin_market_24_high"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/text_view_coin_market_volume"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_label_coin_market_24_high"
+        app:layout_constraintEnd_toStartOf="@id/text_view_coin_market_24_low"/>
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_24_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/text_view_label_coin_market_24_high"
+        app:layout_constraintTop_toTopOf="@+id/text_view_label_coin_market_volume" />
+
+    <TextView
+        android:id="@+id/text_view_coin_market_24_low"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/text_view_coin_market_24_high"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_label_coin_market_24_low" />
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_available_supply"
+        android:text="@string/text_market_rank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_coin_market_volume"
+        app:layout_constraintEnd_toStartOf="@id/text_view_label_coin_market_total_supply"/>
+
+
+    <TextView
+        android:id="@+id/text_view_coin_market_available_supply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintEnd_toStartOf="@id/text_view_coin_market_total_supply"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_view_label_coin_market_available_supply" />
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_total_supply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/text_view_label_coin_market_available_supply"
+        app:layout_constraintTop_toTopOf="@+id/text_view_label_coin_market_available_supply"
+        app:layout_constraintEnd_toStartOf="@id/text_view_label_coin_market_max_supply"/>
+
+    <TextView
+        android:id="@+id/text_view_coin_market_total_supply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/text_view_coin_market_available_supply"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_label_coin_market_total_supply"
+        app:layout_constraintEnd_toStartOf="@id/text_view_coin_market_max_supply"/>
+
+    <TextView
+        android:id="@+id/text_view_label_coin_market_max_supply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/text_view_label_coin_market_total_supply"
+        app:layout_constraintTop_toTopOf="@+id/text_view_label_coin_market_available_supply" />
+
+    <TextView
+        android:id="@+id/text_view_coin_market_max_supply"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_market_rank"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/text_view_coin_market_total_supply"
+        app:layout_constraintTop_toBottomOf="@+id/text_view_label_coin_market_max_supply" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

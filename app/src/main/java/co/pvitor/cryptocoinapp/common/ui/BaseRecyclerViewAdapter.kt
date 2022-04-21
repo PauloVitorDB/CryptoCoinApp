@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewbinding.ViewBinding
+import co.pvitor.cryptocoinapp.databinding.CoinItemBinding
 import co.pvitor.cryptocoinapp.util.ListDifferCallback
 
 abstract class BaseRecyclerViewAdapter<T: ViewBinding, V>(

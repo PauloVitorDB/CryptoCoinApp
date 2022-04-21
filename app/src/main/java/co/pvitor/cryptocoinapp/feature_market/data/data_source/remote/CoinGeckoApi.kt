@@ -1,8 +1,8 @@
 package co.pvitor.cryptocoinapp.feature_market.data.data_source.remote
 
 import co.pvitor.cryptocoinapp.feature_market.data.data_source.remote.dto.CoinDto
+import co.pvitor.cryptocoinapp.feature_market.data.data_source.remote.dto.DetailedCoinPriceDto
 import retrofit2.http.GET
-import retrofit2.http.Header
 import retrofit2.http.Path
 import retrofit2.http.Query
 
@@ -17,10 +17,15 @@ interface CoinGeckoApi {
     suspend fun getMarketCoins(
         @Query("vs_currency") currency: String? = "usd",
         @Query("page") page: Int?,
-        @Query("per_page") per_page: Int?
+        @Query("per_page") perPage: Int?
     ) : List<CoinDto>
 
     @GET("$API_VERSION/coins/{id}")
-    suspend fun getCoinById(@Path("id") id: String) : CoinDto
+    suspend fun getDetailedCoinPriceById(
+        @Path("id") id: String,
+        @Query("tickers") tickers: Boolean? = false,
+        @Query("community_data") communityData: Boolean? = false,
+        @Query("developer_data") developerData: Boolean? = false
+    ) : DetailedCoinPriceDto
 
 }

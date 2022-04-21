@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/detailedCoinInfoFragment">
+
+    <fragment
+        android:id="@+id/marketFragment"
+        android:name="co.pvitor.cryptocoinapp.feature_market.presentation.market.MarketFragment"
+        android:label="MarketFragment" />
+    <fragment
+        android:id="@+id/detailedCoinInfoFragment"
+        android:name="co.pvitor.cryptocoinapp.feature_market.presentation.detailed_coin_price.DetailedCoinPriceFragment"
+        android:label="DetailedCoinInfoFragment" />
+
+</navigation>
