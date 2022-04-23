@@ -1,6 +1,5 @@
 package co.pvitor.cryptocoinapp.common.ui
 
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
@@ -18,7 +17,6 @@ abstract class BaseRecyclerViewPagination(
         super.onScrollStateChanged(recyclerView, newState)
 
         val totalListItemsBound = layoutManager.itemCount
-
         val lastVisibleItemPositionInList = layoutManager.findLastVisibleItemPosition()
 
         val boundItemsWasIncreased = (totalListItemsBound > previousListItemsBound)

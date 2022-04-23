@@ -23,9 +23,10 @@ class ListCoins @Inject constructor(
 
             val coinList: List<Coin> = repository.getMarketCoins(
                 page = page,
-                per_page = 100
+                per_page = 50
             ).map { it.toModel() }
 
+            emit(Resource.Loading(false))
             emit(Resource.Success(coinList))
 
         } catch (e: HttpException) {
